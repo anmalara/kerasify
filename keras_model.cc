@@ -4,7 +4,7 @@
  * MIT License, see LICENSE file.
  */
 
-#include "keras_model.h"
+#include "/nfs/dust/cms/user/amalara/WorkingArea/UHH2_94/CMSSW_9_4_1/src/UHH2/BoostedHiggsToWW/Analysis/DeepWWTagger/code/kerasify/keras_model.h"
 
 #include <cmath>
 #include <fstream>
@@ -68,6 +68,9 @@ bool KerasLayerActivation::LoadLayer(std::ifstream* file) {
         break;
     case kTanh:
         activation_type_ = kTanh;
+        break;
+    case kSoftMax:
+        activation_type_ = kSoftMax;
         break;
     default:
         KASSERT(false, "Unsupported activation type %d", activation);

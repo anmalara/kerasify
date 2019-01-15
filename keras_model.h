@@ -4,9 +4,11 @@
  * MIT License, see LICENSE file.
  */
 
+/*
 #ifndef KERAS_MODEL_H_
 #define KERAS_MODEL_H_
-
+*/
+#pragma once
 #include <algorithm>
 #include <chrono>
 #include <math.h>
@@ -285,7 +287,8 @@ class KerasLayerActivation : public KerasLayer {
         kSoftPlus = 3,
         kSigmoid = 4,
         kTanh = 5,
-        kHardSigmoid = 6
+        kHardSigmoid = 6,
+        kSoftMax = 7
     };
 
     KerasLayerActivation() : activation_type_(ActivationType::kLinear) {}
@@ -446,7 +449,7 @@ class KerasModel {
 
     virtual bool Apply(Tensor* in, Tensor* out);
 
-  private:
+  public:
     std::vector<KerasLayer*> layers_;
 };
 
@@ -469,4 +472,6 @@ class KerasTimer {
     std::chrono::time_point<std::chrono::high_resolution_clock> start_;
 };
 
+/*
 #endif // KERAS_MODEL_H_
+*/
