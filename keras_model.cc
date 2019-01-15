@@ -4,7 +4,7 @@
  * MIT License, see LICENSE file.
  */
 
-#include "/nfs/dust/cms/user/amalara/WorkingArea/UHH2_94/CMSSW_9_4_1/src/UHH2/BoostedHiggsToWW/Analysis/DeepWWTagger/code/kerasify/keras_model.h"
+#include "keras_model.h"
 
 #include <cmath>
 #include <fstream>
